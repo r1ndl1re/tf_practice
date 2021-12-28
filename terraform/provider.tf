@@ -10,9 +10,16 @@ provider "aws" {
   skip_requesting_account_id  = true
 
   endpoints {
-    iam     = "http://localhost:4566"
-    kinesis = "http://localhost:4566"
-    lambda  = "http://localhost:4566"
-    s3      = "http://localhost:4566"
+    iam     = "http://host.docker.internal:4566"
+    kinesis = "http://host.docker.internal:4566"
+    lambda  = "http://host.docker.internal:4566"
+    s3      = "http://host.docker.internal:4566"
+    ec2     = "http://host.docker.internal:4566"
+  }
+
+  default_tags {
+    tags = {
+      Service = "Others"
+    }
   }
 }
