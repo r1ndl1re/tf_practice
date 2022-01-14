@@ -15,6 +15,7 @@ provider "aws" {
     lambda  = "http://host.docker.internal:4566"
     s3      = "http://host.docker.internal:4566"
     ec2     = "http://host.docker.internal:4566"
+    sqs     = "http://host.docker.internal:4566"
   }
 
   default_tags {
