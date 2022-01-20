@@ -6,7 +6,3 @@ resource "aws_sqs_queue" "sample-queue" {
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
 }
-
-resource "aws_sqs_queue" "sample-dlq" {
-  name = "sample-dlq"
-}
